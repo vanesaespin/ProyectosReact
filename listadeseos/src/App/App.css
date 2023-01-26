@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body,html{
+  padding:0;
+  margin:0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  width:400px;
+  margin:auto;
+  max-width: 400px;
+  border: 1px solid;
+  padding: 0 2rem 2rem 2rem;
+  margin-top: 2rem;
+  background-color: whitesmoke;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.deseo-input{
+  border:0;
+  border-bottom: 3px dashed grey;
+  padding:0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.deseo-input__label{
+  font-weight: 700;
+}
+.deseo-input__field{
+  width: 100%;
+  border:0;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
+.lista-deseos{
+  list-style-type: none;
+  padding:0;
+}
+.lista-deseos__item{
   display: flex;
-  flex-direction: column;
+  font-size: 1.2rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.lista-deseos__item > * + * {
+  margin-left: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lista-deseos__item input{
+  width: 2rem;
+  height: 2rem;
+}
+
+.lista-deseos__item--cumplido label{
+  text-decoration: line-through;
+}
+
+.deseos-clear{
+  width: 100%;
+  padding: 0.5rem;
+  background: white;
+  font-size: 1.2rem;
+  border: 1px solid grey;
+  border-radius: 3px;
 }
