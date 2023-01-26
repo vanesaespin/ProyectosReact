@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import './App.css';
+import DeseoItem from './DeseoItem';
 
 {/*VERSION DEL EJERCICIO USANDO LA LIBRERIA CLASSNAMES*/}
 const deseos = [
@@ -14,10 +15,7 @@ const deseos = [
 const App = () => 
   <div className='app'>
     <h1>My wish list APP </h1>
-    <fieldset className='deseo-input'>
-        <legend className='deseo-input__label'>New wish: </legend>
-        <input className='deseo-input__field' placeholder='Enter your wish here' />
-    </fieldset>
+    <DeseoItem />
     <ul className='lista-deseos'>
         {deseos.map(({ texto, cumplido }, i) => (
             <li key={texto} className={classnames(
