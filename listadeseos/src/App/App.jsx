@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import DeseoItem from './DeseoItem';
 import ListaDeseos from './ListaDeseos';
 import './App.css';
@@ -8,11 +8,16 @@ const deseos = [
     { texto: 'ir a la luna', cumplido: false },
     { texto: 'aprobar este módulo', cumplido: false },
     { texto: 'pagar el gimnasio', cumplido: true },
-    { texto: 'aprender React', cumplido: false },
-    
+    { texto: 'aprender React', cumplido: false }  
 ] 
 
-const App = () => 
+
+
+const App = () =>{
+
+{/*hook para practicar estados*/}
+const [count, setCount] = useState(0);
+return(
   <div className='app'>
     <h1>My wish list APP </h1>
     <DeseoItem />
@@ -20,7 +25,10 @@ const App = () =>
     {<ListaDeseos deseos={deseos}/>}
     
     {/* botón */}
-    <button type="button" className='deseos-clear'>Archivar deseos cumplidos</button>
-</div>;
-
+    <button type="button" className='deseos-clear' onClick={() => setCount(count + 1)}>
+      Archivar deseos cumplidos. Clicks {count}
+    </button>
+</div>
+);
+}
 export default App;
