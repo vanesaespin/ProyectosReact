@@ -1,6 +1,7 @@
 import React, { useState }  from 'react';
 import DeseoItem from './DeseoItem';
 import ListaDeseos from './ListaDeseos';
+import BotonArchivar from './BotonArchivar';
 import './App.css';
 
 {/*VERSION DEL EJERCICIO USANDO LA LIBRERIA CLASSNAMES*/}
@@ -14,20 +15,15 @@ const deseos = [
 
 
 const App = () =>{
-
-{/*hook para practicar estados*/}
-const [count, setCount] = useState(0);
 return(
   <div className='app'>
     <h1>My wish list APP </h1>
     <DeseoItem />
 
-    {<ListaDeseos deseos={deseos}/>}
+    <ListaDeseos deseos={deseos}/>
     
     {/* botón */}
-    <button type="button" className='deseos-clear' onClick={() => setCount(count + 1)}>
-      Archivar deseos cumplidos. Clicks {count}
-    </button>
+    <BotonArchivar />
 </div>
 );
 }
