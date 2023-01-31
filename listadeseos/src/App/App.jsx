@@ -1,10 +1,10 @@
-import React, { useState }  from 'react';
-import DeseoItem from './DeseoItem';
+import React from 'react';
+import DeseoInput from './DeseoInput';
 import ListaDeseos from './ListaDeseos';
 import BotonArchivar from './BotonArchivar';
 import './App.css';
+import Cabecera from './Cabecera';
 
-{/*VERSION DEL EJERCICIO USANDO LA LIBRERIA CLASSNAMES*/}
 const deseos = [
     { texto: 'ir a la luna', cumplido: false },
     { texto: 'aprobar este módulo', cumplido: false },
@@ -14,17 +14,16 @@ const deseos = [
 
 
 
-const App = () =>{
-return(
+const App = () =>
   <div className='app'>
-    <h1>My wish list APP </h1>
-    <DeseoItem />
+    <Cabecera texto="Mi lista de deseos"/>
+
+    <DeseoInput />
 
     <ListaDeseos deseos={deseos}/>
     
     {/* botón */}
     <BotonArchivar />
 </div>
-);
-}
+
 export default App;

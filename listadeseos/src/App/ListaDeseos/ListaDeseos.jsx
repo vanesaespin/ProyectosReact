@@ -1,17 +1,15 @@
 import React from "react";
-import classnames from "classnames";
+//import classnames from "classnames";
+import DeseoItem from "../DeseoItem/DeseoItem";
 
-const ListaDeseos = ({deseos}) =>
-<ul className='lista-deseos'>
+const ListaDeseos = ({deseos}) =>{
+    //hook para cuando pulsemos el checkbox
+    return (
+    <ul className='lista-deseos'>
         {deseos.map(({ texto, cumplido }, i) => (
-            <li key={texto} className={classnames(
-                'lista-deseos__item',
-                 { 'lista-deseos__item--cumplido': cumplido}
-            )}>
-                <input id={`deseo${i}`} type="checkbox" checked={cumplido} />
-                <label htmlFor={`deseo${i}`}>{texto}</label>
-            </li>
+            <DeseoItem props={{texto:texto, cumplido:cumplido, i:i}}/>
             ))}
     </ul>
-
+    );
+}
     export default ListaDeseos;

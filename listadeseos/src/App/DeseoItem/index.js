@@ -1,3 +1,2 @@
-import DeseoItem from './DeseoItem';
-
-export default DeseoItem;  
+import DeseoItem from "./DeseoItem";
+export default DeseoItem;
