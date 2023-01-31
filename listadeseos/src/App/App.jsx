@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import DeseoInput from './DeseoInput';
 import ListaDeseos from './ListaDeseos';
 import BotonArchivar from './BotonArchivar';
@@ -14,16 +14,20 @@ const deseos = [
 
 
 
-const App = () =>
-  <div className='app'>
-    <Cabecera texto="Mi lista de deseos"/>
+const App = () =>{
+  
 
-    <DeseoInput />
+  return (<div className='app'>
+  <Cabecera texto="Mi lista de deseos"/>
 
-    <ListaDeseos deseos={deseos}/>
-    
-    {/* botón */}
-    <BotonArchivar />
+  <DeseoInput deseos={deseos} />
+
+  <ListaDeseos deseos={deseos}/>
+  
+  {/* botón */}
+  <BotonArchivar />
 </div>
-
+)
+}
+  
 export default App;
