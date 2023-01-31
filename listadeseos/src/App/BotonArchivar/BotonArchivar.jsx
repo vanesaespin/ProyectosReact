@@ -1,20 +1,20 @@
-import React from "react"
-//import React, {useState} from "react"
+//import React from "react"
+import React, {useState} from "react"
 
 
 //VERSIÓN SIN HOOKS
-const BotonArchivar = () => {
-    const handleClick = () => {alert ('has pinchado');}
-    return (
-        <button type="button" className='deseos-clear' onClick={handleClick}>
-            Archivar deseos cumplidos. 
-        </button>
-    );
-}
+// const BotonArchivar = () => {
+//     const handleClick = () => {alert ('has pinchado');}
+//     return (
+//         <button type="button" className='deseos-clear' onClick={handleClick}>
+//             Archivar deseos cumplidos. 
+//         </button>
+//     );
+// }
  
 
 //VERSIÓN CON HOOKS para contar clics
-/*const BotonArchivar = () => 
+const BotonArchivar = () => 
 {
     //hook para practicar estados
         const [count, setCount] = useState(0);
@@ -24,6 +24,6 @@ const BotonArchivar = () => {
             </button>
         );
 }
-*/
+
 
 export default BotonArchivar;
