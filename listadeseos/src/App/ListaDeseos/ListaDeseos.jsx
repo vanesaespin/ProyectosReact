@@ -6,9 +6,9 @@ const ListaDeseos = ({deseos}) =>{
     //hook para cuando pulsemos el checkbox
     return (
     <ul className='lista-deseos'>
-        {deseos.map(({ texto, cumplido }, i) => (
+        {deseos.map(({ texto, cumplido }, i) => 
             <DeseoItem props={{texto:texto, cumplido:cumplido, i:i}}/>
-            ))}
+            )}
     </ul>
     );
 }

@@ -13,7 +13,8 @@ const DeseoItem = ({props}) =>{
             'lista-deseos__item',
             { 'lista-deseos__item--cumplido': marcado}
         )}>
-            <input id={`deseo${props.i}`} type="checkbox" checked={marcado} 
+            <input id={`deseo${props.i}`} type="checkbox" 
+                    checked={marcado} 
                     onClick={handleOnClick} />
             
             <label htmlFor={`deseo${props.i}`}>{props.texto}</label>
