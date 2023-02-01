@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import DeseoInput from './DeseoInput';
 import ListaDeseos from './ListaDeseos';
 import BotonArchivar from './BotonArchivar';
@@ -15,11 +15,22 @@ const deseos = [
 
 
 const App = () =>{
-  
 
-  return (<div className='app'>
+
+  
+  // const [mdeseos, setDeseos] = useState(deseos);
+  // const [inputValue, setInputValue] = useState('');
+
+  // const nuevoDeseo = (texto) => {
+  //   setDeseos([...mdeseos, { texto, cumplido: false }]);
+  // }
+
+  return (
+  
+  <div className='app'>
   <Cabecera texto="Mi lista de deseos"/>
 
+  {/* <DeseoInput cambio={valor=>setInputValue(valor)} deseos={deseos} />*/ }
   <DeseoInput deseos={deseos} />
 
   <ListaDeseos deseos={deseos}/>
