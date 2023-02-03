@@ -19,14 +19,12 @@ const App = () =>{
   <div className='app'>
     <Cabecera texto="Mi lista de deseos"/>
     
-    {/*<DeseoInput onNuevoDeseo={deseo => setDeseos([deseo, ...deseos ])} /> */}
- 
-    <DeseoInput />
-    <ListaDeseos deseos={deseos}/>
-  
-    {/* <BotonArchivar onArchivadoClick={()=>setDeseos(deseos.filter(deseo=>!deseo.cumplido))}/>  */}
+    <DeseoInput onNuevoDeseo={deseo => setDeseos([deseo, ...deseos ])} />
 
-    {<BotonArchivar/> }
+    <ListaDeseos deseos={deseos} onDeseosChange={setDeseos}/>
+  
+    <BotonArchivar onArchivadoClick={()=>setDeseos(deseos.filter(deseo=>!deseo.cumplido))}/> 
+
   </div>
   )
 }
