@@ -1,6 +1,5 @@
 import React from "react";
-//import classnames from "classnames";
-import DeseoItem from './DeseoItem';
+import DeseoItem from '../DeseoItem/DeseoItem'
 
 const ListaDeseos = ({deseos, onDeseosChange}) =>{
     //hook para cuando pulsemos el checkbox
