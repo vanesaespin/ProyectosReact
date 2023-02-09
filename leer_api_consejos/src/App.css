@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+
+.marco{
+  margin:0 auto;
+  text-align: center;
+  background-color: aquamarine;
+  border: 5px solid black;
+  width:500px;
+}
+
+.rojo{
+  border: 5px solid red;
+}
+
+.verde{
+  border: 5px solid green;
+}
