@@ -6,6 +6,26 @@ import { useState } from "react";
 
 /*COMPONENTE RELOJ QUE SE ACTUALIZA CADA SEGUNDO SIN BOTÓN*/
 
+const Reloj = () => {
+
+    const [now, setNow] = React.useState(new Date().toLocaleTimeString());
+
+    useEffect (()=>{
+        const intervalo = setInterval (() => setNow(new Date().toLocaleTimeString()), 1000);
+        return () => clearInterval (intervalo);
+    },[]);
+
+    return (
+        <div className="container">
+            <span className="clock"> {now} </span>
+            <br />          
+        </div> 
+    )
+
+}
+
+
+/*COMPONENTE RELOJ CON BOTON Y UN CONTADOR*/
 // const Reloj = () => {
 
 //     const [now, setNow] = React.useState(new Date().toLocaleTimeString());
