@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 
-const Contador = ({intervalo}) => {
+const Contador = () => {
     const [conta, setConta]=useState(0);
     useEffect (() => {
         const intervalo = setInterval ( ()=> setConta (c=>c+1), 1000)            

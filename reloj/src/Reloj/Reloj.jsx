@@ -9,18 +9,14 @@ const Reloj = () => {
     const [now, setNow] = React.useState(new Date().toLocaleTimeString());
 
     useEffect (()=>{
-        const tick = () => setNow(new Date().toLocaleTimeString()); 
-        const intervalo = setInterval (tick, 1000);
+        const intervalo = setInterval (() => setNow(new Date().toLocaleTimeString()), 1000);
         return () => clearInterval (intervalo);
     },[]);
-
-    
 
     return (
         <div className="container">
             <span className="clock"> {now} </span>
             <br />          
-            <Contador intervalo={0}/>
         </div> 
     )
 
