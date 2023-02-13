@@ -19,7 +19,7 @@ const App = () =>{
   <div className='app'>
     <Cabecera texto="Mi lista de deseos"/>
     
-    <DeseoInput onNuevoDeseo={deseo => setDeseos([deseo, ...deseos ])} />
+    <DeseoInput onNuevoDeseo={deseo => setDeseos([...deseos, deseo ])} />
 
     <ListaDeseos deseos={deseos} onDeseosChange={setDeseos}/>
   
