@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import MarcoDeseos from './components/MarcoDeseos';
 
 function App() {
   const [consejo, setConsejo]=useState ([]);
@@ -22,10 +23,10 @@ function App() {
   }
 
   return (
-    <>
+    <MarcoDeseos color="rojo">
       <h1>Consejo: {consejo.id}</h1>
       <h2>{consejo.advice}</h2>
-    </>
+    </MarcoDeseos>
   )
 }
 
